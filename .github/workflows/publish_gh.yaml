@@ -29,6 +29,7 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
           registry-url: "https://npm.pkg.github.com"
+          scope: "planxnx"
           cache: "pnpm"
           cache-dependency-path: pnpm-lock.yaml
 
