@@ -1,0 +1,6 @@
+name: netlify-plugin-cloudflare-pages-deploy
+
+inputs:
+  - name: package_exec
+    description: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn` and `pnpm` instead (caching support and recommended this)
+    default: npx
