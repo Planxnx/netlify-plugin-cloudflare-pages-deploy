@@ -4,3 +4,5 @@ inputs:
   - name: package_exec
     description: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn` and `pnpm` instead (caching support and recommended this)
     default: npx
+  - name: deploy_target_branch
+    description: Cloudflare Pages deploy target branch (default is netlify build branch)
