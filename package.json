@@ -2,5 +2,11 @@
   "name": "netlify-plugin-cloudflare-pages-deploy",
   "version": "1.0.0",
   "type": "module",
-  "packageManager": "pnpm@8.7.0"
+  "author": "Thanee Charattrakool <planxthanee@gmail.com>",
+  "packageManager": "pnpm@8.7.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Planxnx/netlify-plugin-cloudflare-pages-deploy"
+  },
+  "license": "MIT"
 }
