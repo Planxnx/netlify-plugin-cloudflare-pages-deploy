@@ -36,6 +36,6 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Publish to NPM
-        run: pnpm publish --publish-branch main --force
+        run: pnpm publish --publish-branch main
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
