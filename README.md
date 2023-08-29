@@ -1,5 +1,7 @@
 # Cloudflare Pages Deploy Plugin
 
+[![NPM](https://img.shields.io/npm/v/netlify-plugin-cloudflare-pages-deploy.svg)](https://www.npmjs.com/package/netlify-plugin-cloudflare-pages-deploy)
+
 **Deploy your static site to [the Fastest web hosting network in the world](https://pages.cloudflare.com/) from [the Greatest DX web hosting platform](https://netlify.app/).**
 
 > An awesome plugin to make you Netlify as a CI/CD tool for Cloudflare Pages
