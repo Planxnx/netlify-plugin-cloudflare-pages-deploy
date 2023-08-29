@@ -1,0 +1,5 @@
+{
+  "name": "netlify-plugin-cloudflare-pages-deploy",
+  "version": "1.0.0",
+  "type": "module"
+}
