@@ -32,10 +32,15 @@ It will run `$ wrangler pages deploy <PUBLISH_DIR> --project-name=<PROJECT_NAME>
 
 ## How to use?
 
+### Inputs
+
+- `package_exec`: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn` and `pnpm` instead (caching support and recommended this) Default: `npx`
+- `deploy_target_branch`: Deploy target branch. For production deploy, use `production` in this config. Default: use netlify current deploy branch
+
 0. Prepare your Cloudflare Page project via `wrangler`
 
 ```sh
-$ npx wrangler pages project create <PROJECT_NAME>
+$ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
 ```
 
 1. Add Environment Variables to Netlify
@@ -46,7 +51,7 @@ $ npx wrangler pages project create <PROJECT_NAME>
      ](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token)
    - `CLOUDFLARE_PAGES_PROJECT_NAME`: Your Cloudflare Pages Project Name
 
-2. Add this plugin to your `netlify.toml` (this for monorepo path)
+2. Add this plugin to your `netlify.toml`
 
 ```toml
 # for all deploy contexts (production, branch deploys, Deploy Previews).
@@ -58,9 +63,13 @@ $ npx wrangler pages project create <PROJECT_NAME>
 ```
 
 ```toml
-# for specific deploy context [`production`, `deploy-preview`, `branch-deploy`, `dev`]
+# for production deploy context. supports [`production`, `deploy-preview`, `branch-deploy`, `dev`]
 
-package = "netlify-plugin-cloudflare-pages-deploy"
+[[context.production.plugins]]
+package = "netlify-plugin-cloudflare-pages"
+	[context.production.plugins.inputs]
+		package_exec = "pnpm"
+		deploy_target_branch = "main"
 ```
 
 ### [Recommend]
