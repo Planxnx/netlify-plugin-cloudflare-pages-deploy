@@ -1,5 +1,6 @@
 {
   "name": "netlify-plugin-cloudflare-pages-deploy",
   "version": "1.0.0",
-  "type": "module"
+  "type": "module",
+  "packageManager": "pnpm@8.7.0"
 }
