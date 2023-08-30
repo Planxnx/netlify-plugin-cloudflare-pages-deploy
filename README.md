@@ -32,10 +32,25 @@ It will run `$ wrangler pages deploy <PUBLISH_DIR> --project-name=<PROJECT_NAME>
 
 ## How to use?
 
+### Installation
+
+```sh
+# npm
+$ npm install -D netlify-plugin-cloudflare-pages
+
+# yarn
+$ yarn add -D netlify-plugin-cloudflare-pages
+
+# pnpm
+$ pnpm add -D netlify-plugin-cloudflare-pages
+```
+
 ### Inputs
 
 - `package_exec`: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn` and `pnpm` instead (caching support and recommended this) Default: `npx`
 - `deploy_target_branch`: Deploy target branch. For production deploy, use `production` in this config. Default: use netlify current deploy branch
+
+### Setup
 
 0. Prepare your Cloudflare Page project via `wrangler`
 
