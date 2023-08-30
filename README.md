@@ -1,6 +1,6 @@
 # Cloudflare Pages Deploy Plugin
 
-**Deploy your static site to [the Fastest web hosting network in the world](https://pages.cloudflare.com/) from [the Greatest DX web hosting platform](https://netlify.app/).**
+**Deploy your static site to [the Fastest web hosting network in the world ⚡️](https://pages.cloudflare.com/) from [the Greatest DX web hosting platform 🚀](https://netlify.app/).**
 
 [![NPM](https://img.shields.io/npm/v/netlify-plugin-cloudflare-pages.svg)](https://www.npmjs.com/package/netlify-plugin-cloudflare-pages)
 
@@ -20,7 +20,7 @@ Cause Netlify has a great Developer Experience CI/CD platform for many javascrip
 - Great build caching and build time.
 - There are many ready-to-integrate plugins (and local customized plugin supports)
 
-But Cloudflare Pages is lightning fast and has much better network latency than Netlify. Your sites will deploy on Cloudflare's edge network that's the fastest network in the world.
+But Cloudflare Pages is lightning fast ⚡️ and has much better network latency than Netlify. Your sites will deploy on Cloudflare's edge network that's the fastest network in the world.
 
 See more about: [Cloudflare Pages is Lightning Fast
 ](https://blog.cloudflare.com/cloudflare-pages-is-lightning-fast/)
@@ -72,7 +72,7 @@ $ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
 # for all deploy contexts (production, branch deploys, Deploy Previews).
 
 [[plugins]]
-   package = "netlify-plugin-cloudflare-pages-deploy"
+   package = "netlify-plugin-cloudflare-pages"
    [plugins.inputs]
       package_exec = "pnpx"
 ```
@@ -81,9 +81,9 @@ $ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
 # for production deploy context. supports [`production`, `deploy-preview`, `branch-deploy`, `dev`]
 
 [[context.production.plugins]]
-package = "netlify-plugin-cloudflare-pages"
+	package = "netlify-plugin-cloudflare-pages"
 	[context.production.plugins.inputs]
-		package_exec = "pnpm"
+		package_exec = "pnpx"
 		deploy_target_branch = "main"
 ```
 
