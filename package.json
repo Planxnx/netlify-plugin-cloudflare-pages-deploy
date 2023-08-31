@@ -1,5 +1,5 @@
 {
-  "name": "netlify-plugin-cloudflare-pages",
+  "name": "netlify-plugin-cloudflare-pages-deploy",
   "version": "0.9.2",
   "type": "module",
   "author": "Thanee Charattrakool <planxthanee@gmail.com>",
