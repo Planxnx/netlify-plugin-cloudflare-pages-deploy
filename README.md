@@ -36,13 +36,13 @@ It will run `$ wrangler pages deploy <PUBLISH_DIR> --project-name=<PROJECT_NAME>
 
 ```sh
 # npm
-$ npm install -D netlify-plugin-cloudflare-pages
+$ npm install -D netlify-plugin-cloudflare-pages-deploy
 
 # yarn
-$ yarn add -D netlify-plugin-cloudflare-pages
+$ yarn add -D netlify-plugin-cloudflare-pages-deploy
 
 # pnpm
-$ pnpm add -D netlify-plugin-cloudflare-pages
+$ pnpm add -D netlify-plugin-cloudflare-pages-deploy
 ```
 
 ### Inputs
@@ -72,7 +72,7 @@ $ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
 # for all deploy contexts (production, branch deploys, Deploy Previews).
 
 [[plugins]]
-   package = "netlify-plugin-cloudflare-pages"
+   package = "netlify-plugin-cloudflare-pages-deploy"
    [plugins.inputs]
       package_exec = "pnpx"
 ```
@@ -81,7 +81,7 @@ $ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
 # for production deploy context. supports [`production`, `deploy-preview`, `branch-deploy`, `dev`]
 
 [[context.production.plugins]]
-	package = "netlify-plugin-cloudflare-pages"
+	package = "netlify-plugin-cloudflare-pages-deploy"
 	[context.production.plugins.inputs]
 		package_exec = "pnpx"
 		deploy_target_branch = "main"
@@ -93,8 +93,9 @@ Add `wrangler` to your project and use your lover package managers like`npm`, `y
 
 This will make your build faster cause Netlify always caching dependencies and `wrangler` will be cached too.
 
+#### For `yarn` and `yarn` Workspace
 ```sh
-$ yarn add --dev wrangler
+$ yarn add -D wrangler
 ```
 
 ```toml
@@ -102,6 +103,30 @@ $ yarn add --dev wrangler
    package = "netlify-plugin-cloudflare-pages-deploy"
    [plugins.inputs]
       package_exec = "yarn"
+```
+
+#### For `pnpm`
+```sh
+$ pnpm add -D wrangler
+```
+
+```toml
+[[plugins]]
+   package = "netlify-plugin-cloudflare-pages-deploy"
+   [plugins.inputs]
+      package_exec = "pnpm exec"
+```
+
+#### For `pnpm` Workspace
+```sh
+$ pnpm add -D wrangler --filter <APP_NAME>
+```
+
+```toml
+[[plugins]]
+   package = "netlify-plugin-cloudflare-pages-deploy"
+   [plugins.inputs]
+      package_exec = "pnpm --filter <APP_NAME> -- exec"
 ```
 
 ## For more information about:
