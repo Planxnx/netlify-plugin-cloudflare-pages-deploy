@@ -117,18 +117,6 @@ $ pnpm add -D wrangler
       package_exec = "pnpm exec"
 ```
 
-#### For `pnpm` Workspace
-```sh
-$ pnpm add -D wrangler --filter <APP_NAME>
-```
-
-```toml
-[[plugins]]
-   package = "netlify-plugin-cloudflare-pages-deploy"
-   [plugins.inputs]
-      package_exec = "pnpm --filter <APP_NAME> -- exec"
-```
-
 ## For more information about:
 
 - Deploy Context: https://docs.netlify.com/site-deploys/overview/#deploy-contexts
