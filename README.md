@@ -43,11 +43,14 @@ $ yarn add -D netlify-plugin-cloudflare-pages-deploy
 
 # pnpm
 $ pnpm add -D netlify-plugin-cloudflare-pages-deploy
+
+# bun
+$ bun add -D netlify-plugin-cloudflare-pages-deploy
 ```
 
 ### Inputs
 
-- `package_exec`: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn` and `pnpm` instead (caching support and recommended this) Default: `npx`
+- `package_exec`: Package exec to use Eg. `npx`, `pnpx` or install `wrangler` to devDeps and use `npm`, `yarn`, `pnpm` and `bun` instead (caching support and recommended this) Default: `npx`
 - `deploy_target_branch`: Deploy target branch. For production deploy, use `production` in this config. Default: use netlify current deploy branch
 
 ### Setup
@@ -116,6 +119,19 @@ $ pnpm add -D wrangler
    [plugins.inputs]
       package_exec = "pnpm exec"
 ```
+
+#### For `bun`
+```sh
+$ bun add -D wrangler
+```
+
+```toml
+[[plugins]]
+   package = "netlify-plugin-cloudflare-pages-deploy"
+   [plugins.inputs]
+      package_exec = "bun"
+```
+
 
 ## For more information about:
 
