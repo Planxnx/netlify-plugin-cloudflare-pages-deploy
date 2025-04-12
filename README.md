@@ -63,7 +63,7 @@ $ npx wrangler pages project create <PROJECT_NAME> --production-branch=main
    - `CLOUDFLARE_ACCOUNT_ID`: Your target Cloudflare Account ID. See more: [Find your zone and account IDs
      ](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/)
    - `CLOUDFLARE_API_TOKEN` : Your Cloudflare API Token (with `Pages:Edit` permission) See more: [Create a Cloudflare API token
-     ](https://developers.cloudflare.com/workers/wrangler/ci-cd/#create-a-cloudflare-api-token)
+     ](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/#api-token)
    - `CLOUDFLARE_PAGES_PROJECT_NAME`: Your Cloudflare Pages Project Name
 
 2. Add this plugin to your `netlify.toml`
